@@ -23,7 +23,6 @@ FROM dev as build
 COPY . .
 RUN yarn run prisma:generate
 RUN yarn build
-RUN yarn create-key
 
 
 FROM build as dev-runner
